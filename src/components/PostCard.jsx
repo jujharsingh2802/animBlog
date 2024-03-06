@@ -11,7 +11,7 @@ function PostCard({
             <div className='w-full justify-center mb-4'>
                 <img src={appwriteService.getFilePreview(featuredImage) }  alt="" className=' border-[1px] border-gray-100 rounded-xl'/>
             </div>
-            <h2 className='sm:text-xl  text-sm font-bold'>{title}</h2>
+            <h2 className='sm:text-xl  text-lg font-bold'>{title}</h2>
         </div>
     </Link>
   )
