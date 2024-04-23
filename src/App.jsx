@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 // import './App.css'
 import { useDispatch } from 'react-redux'
-import authService from './appwrite/auth'
-import { login, logout } from './store/authSlice'
-import { Footer, Header } from './components'
+import authService from './appwrite/auth.js'
+import { login, logout } from './store/authSlice.js'
+import { Footer, Header } from './components.js'
 import { Outlet } from 'react-router-dom'
-import Loading from './components/Loading'
+import Loading from './components/Loading.jsx'
 
 function App() {
   
