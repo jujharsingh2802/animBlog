@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import authService from './appwrite/auth.js'
 import { login, logout } from './store/authSlice.js'
-import { Footer, Header } from './components.js'
+import { Footer, Header } from './components'
 import { Outlet } from 'react-router-dom'
 import Loading from './components/Loading.jsx'
 
