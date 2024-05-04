@@ -42,22 +42,22 @@ function Header() {
     <header className='py-3 shadow bg-gray-500 relative rounded-b-lg '>
       <Container>
         <nav className='flex relative'>
-        <div className='mr-4 left-[-75px] absolute inset-y-0 top-[-18px] '>
+        <div className='mr-4 left-[-75px] hidden sm:block absolute inset-y-0 top-[-18px] '>
             <Link to="/" className='text-white text-xl font-bold'>
               <Logo width='77px' className='absolute '/>
             </Link> 
           </div>
-          <div className="tag my-auto font-black z-[5px] px-2 cursor-pointer text-3xl">ANIM<span className='text-yellow-400 '>BLOG</span></div>
+          <div className="tag hidden sm:block my-auto font-black z-[5px] px-2 cursor-pointer text-3xl">ANIM<span className='text-yellow-400 '>BLOG</span></div>
 
-          <ul className='flex ml-auto'>
+          <ul className='flex sm:justify-start sm:ml-auto '>
 
           {
               navItems.map((item)=>(
               item.active ? (
-                <li key={item.name} className='mr-4'>
+                <li key={item.name} className='sm:mr-4'>
                   <button
                    onClick={()=>navigate(item.slug)}
-                   className='inline-block px-6 py-2 duration-200 hover:bg-blue-100 rounded-full' >
+                   className='inline-block px-3 sm:px-6 py-1 sm:py-2 duration-200 hover:bg-blue-100 rounded-full' >
                     {item.name}
                   </button>
                 </li>
