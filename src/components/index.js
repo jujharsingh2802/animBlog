@@ -12,6 +12,7 @@ import AuthLayout from "./AuthLayout";
 import Input from "./Input";
 import Select from "./Select";
 import Button from "./Button";
+import ModeChangerButton from "./ModeChangerButton";
 export{
     Header,
     Footer,
@@ -26,5 +27,6 @@ export{
     PostCard,
     AuthLayout,
     Input,
-    Select
+    Select,
+    ModeChangerButton
 }
