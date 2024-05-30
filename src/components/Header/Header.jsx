@@ -43,7 +43,7 @@ function Header() {
         <nav className='flex relative'>
         <div className='mr-4 left-[-60px] hidden sm:block  absolute inset-y-0 top-[-1px] '>
             <Link to="/" className='text-white text-xl  font-bold'>
-              <Logo width='45px' className='absolute border-[1px] border-white'/>
+              <Logo width='45px' className=''/>
             </Link> 
           </div>
           <div className="tag hidden sm:block my-auto dark:text-white font-black z-[5px] px-2 cursor-pointer text-3xl">ANIM<span className='text-yellow-400 '>BLOG</span></div>

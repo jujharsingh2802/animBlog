@@ -1,9 +1,8 @@
 import React from 'react';
-import 'tailwindcss/tailwind.css';
 
-function Logo({ width = '100px' }) {
+function Logo({ width = '100px', className="" }) {
   return (
-    <div className="flex items-center justify-center overflow-hidden rounded-full ">
+    <div className={`flex items-center justify-center overflow-hidden rounded-full ${className}`}>
       <img
         width={width}
         alt="Logo"
