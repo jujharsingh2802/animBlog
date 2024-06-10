@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import {Container, Logo, LogoutBtn, ModeChangerButton} from '../index'
 import { useSelector } from 'react-redux'
 import useTheme from '../../context/Theme.jsx'
@@ -8,6 +8,8 @@ function Header() {
 
   const authStatus = useSelector((state) => state.auth.status)
   const navigate = useNavigate()
+  const location = useLocation()
+  const currentPath = location.pathname
   const navItems = [
     {
       name: 'Home',
@@ -32,8 +34,13 @@ function Header() {
     {
       name: "Add Post",
       slug: "/add-post",
-      active: authStatus,
+      active: authStatus && currentPath!=="/add-post",
     },
+    {
+      name: "My Posts",
+      slug: "/my-posts",
+      active: authStatus && currentPath==="/add-post",
+    }
   
   ]
 
@@ -46,8 +53,9 @@ function Header() {
               <Logo width='45px' className=''/>
             </Link> 
           </div>
+          <Link to= "/">
           <div className="tag hidden sm:block my-auto dark:text-white font-black z-[5px] px-2 cursor-pointer text-3xl">ANIM<span className='text-yellow-400 '>BLOG</span></div>
-
+          </Link>
           <ul className='flex sm:justify-start sm:ml-auto '>
             <ModeChangerButton />
           {
