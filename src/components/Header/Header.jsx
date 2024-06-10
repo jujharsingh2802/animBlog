@@ -29,19 +29,18 @@ function Header() {
     {
       name: "All Posts",
       slug: "/all-posts",
-      active: authStatus,
-    },
-    {
-      name: "Add Post",
-      slug: "/add-post",
-      active: authStatus && currentPath!=="/add-post",
+      active: authStatus && currentPath!=="/all-posts",
     },
     {
       name: "My Posts",
       slug: "/my-posts",
-      active: authStatus && currentPath==="/add-post",
+      active: authStatus && currentPath==="/all-posts",
+    },
+    {
+      name: "Add Post",
+      slug: "/add-post",
+      active: authStatus,
     }
-  
   ]
 
   return (
