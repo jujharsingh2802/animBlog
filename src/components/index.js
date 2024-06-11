@@ -13,6 +13,8 @@ import Input from "./Input";
 import Select from "./Select";
 import Button from "./Button";
 import ModeChangerButton from "./ModeChangerButton";
+import SocialLogin from "./SocialLogin";
+
 export{
     Header,
     Footer,
@@ -28,5 +30,6 @@ export{
     AuthLayout,
     Input,
     Select,
-    ModeChangerButton
+    ModeChangerButton,
+    SocialLogin,
 }

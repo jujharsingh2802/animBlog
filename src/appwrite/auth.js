@@ -49,6 +49,13 @@ export class AuthService{
         }
         return null;
     }
+    async createOAuth2Session() {
+        try {
+          await this.account.createOAuth2Session('google', 'https://anim-blog.vercel.app/', 'https://anim-blog.vercel.app/');
+        } catch (error) {
+          console.log("Appwrite service :: createOAuth2Session ::error", error);
+        }
+      }
 }
 
 

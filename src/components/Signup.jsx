@@ -1,5 +1,5 @@
 import React from 'react'
-import {Logo, Button,Input} from './index'
+import {Logo, Button,Input, SocialLogin} from './index'
 import { Link, useNavigate } from 'react-router-dom'
 import { login } from '../store/authSlice'
 import authService from '../appwrite/auth'
@@ -77,9 +77,13 @@ function Signup() {
                         {...register("password", {
                             required: true,})}
                         />
-                        <Button type="submit" className="w-full">
+                        <div className='flex'>
+                        <Button type="submit" className="w-1/2 mr-[5px]">
                             Create Account
                         </Button>
+                        
+                        <div className='w-1/2 '><SocialLogin/></div>
+                      </div>
                     </div>
                 </form>
       </div>
