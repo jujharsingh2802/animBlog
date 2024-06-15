@@ -8,15 +8,13 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import { AuthLayout, Login } from './components/index.js'
 import { GoogleOAuthProvider } from '@react-oauth/google';
-
 import MyPosts from './pages/MyPosts'
 import AddPost from "./pages/AddPost";
 import Signup from './pages/Signup'
 import EditPost from "./pages/EditPost";
-
 import Post from "./pages/Post";
-
 import AllPosts from "./pages/AllPosts";
+import conf from './conf/conf.js'
 
 const router = createBrowserRouter([
   {
@@ -89,7 +87,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <GoogleOAuthProvider clientId="<your_client_id>">
+  <GoogleOAuthProvider clientId={conf.googleClientId}>
 
 
     <Provider store={store}>

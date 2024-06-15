@@ -70,11 +70,13 @@ function Login() {
                     required: true,
                 })}
                 />
-                <Button
-                type="submit"
-                className="w-full"
-                >Sign in</Button>
-                <SocialLogin/>
+                <div className='flex '>
+                    <Button
+                    type="submit"
+                    className="w-1/2 mr-[5px]"
+                    >Sign in</Button>
+                    <div className='w-1/2'><SocialLogin /></div>
+                </div>
             </div>
         </form>
         </div>
